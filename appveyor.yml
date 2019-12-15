@@ -7,7 +7,7 @@ before_build:
   - nuget restore Sitecore.Lighthouse.sln
   - SonarScanner.MSBuild.exe begin /k:"Sitecore.Lighthouse" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%sonar_token%" /n:"Sitecore.Lighthouse" /o:"antonytm-github"
   - MSBuild.exe Sitecore.Lighthouse.sln /t:Rebuild /verbosity:quiet
-  - SonarScanner.MSBuild.exe end 
+  - SonarScanner.MSBuild.exe end /d:"sonar.login=%sonar_token%" /o:"antonytm-github"
 build:
   project: Sitecore.Lighthouse.sln
 after_build:
