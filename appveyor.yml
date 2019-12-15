@@ -13,7 +13,7 @@ after_build:
   - ps: .\build\build.ps1  
 environment:
   sonar_token:
-    secure: 5ZTmF0ff7qEIVt7qEgJpSCBcopbSqY3O0uv3gMLJZ9M04A6MyHoz9FAqP6HI/7eX
+    secure: xT1FpsQcLjyehwDNkphemCQZOGIgPm8asR0BMqYtaG3+3u5FhFqFTm2QOBGaRzvY
 deploy:
   release: Sitecore.Lighthouse-v$(appveyor_build_version)
   description: 'Solr admin in Sitecore'
