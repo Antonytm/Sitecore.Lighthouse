@@ -5,7 +5,9 @@ artifacts:
 before_build:
   - nuget sources add -Name SitecorePublicFeed -Source https://sitecore.myget.org/F/sc-packages/api/v3/index.json
   - nuget restore Sitecore.Lighthouse.sln
-  - MSBuild.SonarQube.Runner.exe begin /k:"Sitecore.Lighthouse" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%sonar_token%" /n:"Sitecore.Lighthouse" /o:"antonytm-github"
+  - SonarScanner.MSBuild.exe begin /k:"Sitecore.Lighthouse" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%sonar_token%" /n:"Sitecore.Lighthouse" /o:"antonytm-github"
+  - MSBuild.exe Sitecore.Lighthouse.sln /t:Rebuild
+  - SonarScanner.MSBuild.exe end 
 build:
   project: Sitecore.Lighthouse.sln
 after_build:
