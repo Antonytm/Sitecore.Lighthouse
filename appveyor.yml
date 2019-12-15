@@ -1,0 +1,32 @@
+version: 1.0.{build}
+artifacts:
+  - path: build\artifacts\*.update
+    name: Sitecore.Lighthouse
+before_build:
+  - nuget sources add -Name SitecorePublicFeed -Source https://sitecore.myget.org/F/sc-packages/api/v3/index.json
+  - nuget restore Sitecore.Lighthouse.sln
+  - MSBuild.SonarQube.Runner.exe begin /k:"Sitecore.Lighthouse" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%sonar_token%" /n:"Sitecore.Lighthouse" /o:"antonytm-github"
+build:
+  project: Sitecore.Lighthouse.sln
+after_build:
+  - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=%sonar_token%"
+  - ps: .\build\build.ps1  
+environment:
+  sonar_token:
+    secure: 5ZTmF0ff7qEIVt7qEgJpSCBcopbSqY3O0uv3gMLJZ9M04A6MyHoz9FAqP6HI/7eX
+deploy:
+  release: Sitecore.Lighthouse-v$(appveyor_build_version)
+  description: 'Solr admin in Sitecore'
+  provider: GitHub
+  auth_token:
+    secure: rkLSxUbN2YMMG/r6lzLq1PN0n07dqJBtk/8ZR2c/InGy0SBOsmqGXfIQWMQOZUAs 
+  draft: false
+  prerelease: false
+  on:
+    branch: master                # release from master branch only
+    appveyor_repo_tag: true       # deploy on tag push only
+install:
+  - ps: Install-Module -Name Sitecore.Courier -Force
+  - ps: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  - choco install sitecore-courier
+  - choco install "msbuild-sonarqube-runner" -y

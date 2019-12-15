@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{CD64D2CB-9FF6-4C7A-89B0-A8B3F88F20DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lighthouse", "Lighthouse", "{5064494C-476B-4C8C-A571-2FD0752B1AF6}"
+	ProjectSection(SolutionItems) = preProject
+		src\Foundation\Lighthouse\code\Antonytm.Foundation.Lighthouse.csproj = src\Foundation\Lighthouse\code\Antonytm.Foundation.Lighthouse.csproj
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5064494C-476B-4C8C-A571-2FD0752B1AF6} = {CD64D2CB-9FF6-4C7A-89B0-A8B3F88F20DE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {155E010F-02FC-4AC3-9F78-A767D5BBFAEF}
+	EndGlobalSection
+EndGlobal
