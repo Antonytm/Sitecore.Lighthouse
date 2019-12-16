@@ -1,2 +1,4 @@
-
-.vs/config/applicationhost.config
+.vs/*
+packages/*
+**/bin/*
+**/obj/Debug/*
