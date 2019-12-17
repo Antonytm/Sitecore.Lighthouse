@@ -2,3 +2,4 @@
 packages/*
 **/bin/*
 **/obj/Debug/*
+src/Foundation/Lighthouse/code/Properties/PublishProfiles/*
