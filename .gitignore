@@ -4,3 +4,4 @@ packages/*
 **/obj/Debug/*
 src/Foundation/Lighthouse/code/Properties/PublishProfiles/*
 src/Foundation/Lighthouse/code/Lighthouse Tools/*
+**/code/obj/Release/*
