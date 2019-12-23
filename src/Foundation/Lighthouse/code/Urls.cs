@@ -17,7 +17,7 @@ namespace Foundation.Lighthouse
             };
 
             var site = GetSite(item);
-            using (new SiteContextSwitcher(SiteContext.GetSite("website")))
+            using (new SiteContextSwitcher(new SiteContext(site)))
             {
                 return LinkManager.GetItemUrl(item, options);
             }
@@ -29,7 +29,7 @@ namespace Foundation.Lighthouse
 
             SiteInfo currentSiteinfo = null;
             var matchLength = 0;
-            foreach (var siteInfo in siteInfoList)
+            foreach (var siteInfo in siteInfoList.Where(x => !Constants.ServiceSites.Contains(x.Name)))
             {
                 if (item.Paths.FullPath.StartsWith(siteInfo.RootPath, StringComparison.OrdinalIgnoreCase) && siteInfo.RootPath.Length > matchLength)
                 {

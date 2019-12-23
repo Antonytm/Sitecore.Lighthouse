@@ -14,5 +14,10 @@ namespace Foundation.Lighthouse
         public const string DateTimeFormat = "yyyyMMddhhmmss";
         public const string JsonFileFormat = "{0}.json";
         public const string HtmlFileFormat = "{0}.html";
+
+        public static readonly List<string> ServiceSites = new List<string>()
+        {
+            "shell", "login", "admin", "service", "modules_shell", "modules_website", "scheduler", "publisher", "exm"
+        };
     }
 }
