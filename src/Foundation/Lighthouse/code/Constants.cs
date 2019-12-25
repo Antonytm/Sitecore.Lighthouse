@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Sitecore.Data;
 
 namespace Foundation.Lighthouse
 {
@@ -16,5 +17,7 @@ namespace Foundation.Lighthouse
         {
             "shell", "login", "admin", "service", "modules_shell", "modules_website", "scheduler", "publisher", "exm"
         };
+
+        public static readonly ID LighthouseTemplate = new ID("{BB102C6B-C167-4453-9A76-BC44F8889424}");
     }
 }

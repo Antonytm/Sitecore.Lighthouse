@@ -8,17 +8,17 @@ namespace Foundation.Lighthouse
     {
         public string GetReportsPath(Item item)
         {
-            return $"{HttpRuntime.AppDomainAppPath}/{Constants.Reports}/{item.Paths.FullPath}";
+            return $"{HttpRuntime.AppDomainAppPath}{Constants.Reports}/{item.Paths.FullPath}".Replace("/", "\\");
         }
 
         public string GetReportJsonPath(Item item)
         {
-            return $"{GetReportsPath(item)}/{GetJsonFileName()}";
+            return $"{GetReportsPath(item)}/{GetJsonFileName()}".Replace("/", "\\");
         }
 
         public string GetReportHtmlPath(Item item)
         {
-            return $"{GetReportsPath(item)}/{GetHtmlFileName()}";
+            return $"{GetReportsPath(item)}/{GetHtmlFileName()}".Replace("/", "\\");
         }
 
         public void CreateReportDir(Item item)
