@@ -25,7 +25,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20080709T115903
+      Value: 20080709T085903Z
     - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
       Hint: __Workflow state
       Value: 
@@ -35,7 +35,7 @@ Languages:
         sitecore\Admin
     - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
       Hint: __Valid from
-      Value: 20060206T114840
+      Value: 20060206T094840Z
     - ID: "c95d21bd-66c3-444b-a37f-d346cbaf2b55"
       Hint: Header
-      Value: Attributes
+      Value: Actions
