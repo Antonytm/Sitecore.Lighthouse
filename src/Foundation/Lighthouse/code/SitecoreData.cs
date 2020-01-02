@@ -46,7 +46,7 @@ namespace Foundation.Lighthouse
                 DateTime = DateTime.Now,
                 Accessibility = data.Categories.Accessibility.Score.Value,
                 BestPractices = data.Categories.BestPractices.Score,
-                Perfomance = data.Categories.Performance.Score,
+                Performance = data.Categories.Performance.Score,
                 SEO = data.Categories.Seo.Score.Value
             };
             checkpoints.Add(newCheckpoint);
