@@ -227,6 +227,8 @@
     <Compile Include="Urls.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Lighthouse\googleCharts.min.js" />
+    <Content Include="ChartTest.html" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
