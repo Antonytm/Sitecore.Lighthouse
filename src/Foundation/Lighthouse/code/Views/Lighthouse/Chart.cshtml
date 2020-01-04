@@ -1,0 +1,49 @@
+﻿@model Foundation.Lighthouse.Models.Chart
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="chart_div"></div>
+    <script>
+    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(drawLineColors);
+
+    function drawLineColors() {
+
+        var json = @Html.Raw(Model.Json);
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'X');
+        data.addColumn('number', 'Perfomance');
+        data.addColumn('number', 'Accessibility');
+        data.addColumn('number', 'BestPractices');
+        data.addColumn('number', 'SEO"');
+
+        var array = [];
+        for(var i in json){
+            array.push([new Date(json[i].DateTime), json[i].Perfomance, json[i].Accessibility, json[i].BestPractices, json[i].SEO]);
+        }
+
+        console.log(array);
+        data.addRows(array);
+
+
+        var options = {
+            hAxis: {
+                title: 'Time'
+            },
+            vAxis: {
+                title: 'Score'
+            }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+    </script>
+</body>
+</html>

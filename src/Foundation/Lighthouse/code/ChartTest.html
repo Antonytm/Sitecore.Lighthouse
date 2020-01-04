@@ -1,11 +1,87 @@
-﻿<!DOCTYPE html>
+﻿@model Foundation.Lighthouse.Models.Chart
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title></title>
 </head>
 <body>
-    https://jsfiddle.net/antonytm/85obj20u/
-    <script src="Assets/Lighthouse/googleCharts.min.js"></script>
+https://jsfiddle.net/antonytm/85obj20u/
+<!--script src="Assets/Lighthouse/googleCharts.min.js"></!--script-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="chart_div"></div>
+<script>
+    google.charts.load('current', { packages: ['corechart', 'line'] });
+    google.charts.setOnLoadCallback(drawLineColors);
+
+    function drawLineColors() {
+
+        var json = [
+            {
+                "DateTime": "2019-12-25T12:51:59.1493077+02:00",
+                "Perfomance": 1.0,
+                "Accessibility": 1.0,
+                "BestPractices": 1.0,
+                "SEO": 1.0
+            },
+            {
+                "DateTime": "2019-12-25T13:08:03.6851361+02:00",
+                "Perfomance": 0.99,
+                "Accessibility": 1.0,
+                "BestPractices": 0.86,
+                "SEO": 0.64
+            },
+            {
+                "DateTime": "2019-12-25T13:08:39.8945915+02:00",
+                "Perfomance": 0.99,
+                "Accessibility": 1.0,
+                "BestPractices": 0.86,
+                "SEO": 0.64
+            },
+            {
+                "DateTime": "2019-12-25T13:09:32.6004142+02:00",
+                "Perfomance": 0.99,
+                "Accessibility": 1.0,
+                "BestPractices": 0.86,
+                "SEO": 0.64
+            },
+            {
+                "DateTime": "2019-12-25T13:10:34.3502107+02:00",
+                "Perfomance": 0.99,
+                "Accessibility": 1.0,
+                "BestPractices": 0.86,
+                "SEO": 0.64
+            }
+        ];
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'X');
+        data.addColumn('number', 'Perfomance');
+        data.addColumn('number', 'Accessibility');
+        data.addColumn('number', 'BestPractices');
+        data.addColumn('number', 'SEO"');
+
+        var array = [];
+        for (var i in json) {
+            array.push([new Date(json[i].DateTime), json[i].Perfomance, json[i].Accessibility, json[i].BestPractices, json[i].SEO]);
+        }
+
+        console.log(array);
+        data.addRows(array);
+
+
+        var options = {
+            hAxis: {
+                title: 'Time'
+            },
+            vAxis: {
+                title: 'Score'
+            }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>
 </body>
 </html>
