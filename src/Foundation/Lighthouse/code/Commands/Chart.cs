@@ -18,7 +18,7 @@ namespace Foundation.Lighthouse.Commands
             {
                 //Do not disclose internal server configuration to user
                 var url = $"{HttpContext.Current.Request.Url.Scheme}://{HttpContext.Current.Request.Url.Host}/api/sitecore/lighthouse/Chart?database={item.Database}&itemId={item.ID}";
-                SheerResponse.ShowModalDialog(new ModalDialogOptions(url) { Response = false });
+                SheerResponse.ShowModalDialog(new ModalDialogOptions(url) { Response = false, MinWidth = "920", MinHeight = "220", Width = "1000"});
             }
             else
             {

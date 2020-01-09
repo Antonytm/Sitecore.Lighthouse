@@ -24,7 +24,7 @@ namespace Foundation.Lighthouse.Commands
             {
                 //Do not disclose internal server configuration to user
                 var url = $"{HttpContext.Current.Request.Url.Scheme}://{HttpContext.Current.Request.Url.Host}/api/sitecore/lighthouse/ShowFileContent?filename={latestFile.Name}&database={item.Database}&itemId={item.ID}";
-                SheerResponse.ShowModalDialog(new ModalDialogOptions(url) { Response = false });
+                SheerResponse.ShowModalDialog(new ModalDialogOptions(url) { Response = false, Width = "1000", Height = "700"});
             }
             else
             {
