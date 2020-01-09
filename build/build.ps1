@@ -17,5 +17,5 @@ Copy-Item .\src\Foundation\Lighthouse\code\bin\Foundation.Lighthouse* .\build\pa
 Copy-Item .\src\Foundation\Lighthouse\code\App_Config\Include\Foundation\Foundation.Lighthouse.config .\build\package\App_Config\Include\Foundation
 Copy-Item .\src\Foundation\Lighthouse\serialization\* .\build\package\Data -recurse
 
-$packageCmd = "Sitecore.Courier.Runner.exe -t build\package -o build\artifacts\sitecore.solrproxy." + $version + ".update -r"
+$packageCmd = "Sitecore.Courier.Runner.exe -t build\package -o build\artifacts\sitecore.lighthouse." + $version + ".update -r"
 iex $packageCmd
