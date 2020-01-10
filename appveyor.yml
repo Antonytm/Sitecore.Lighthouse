@@ -29,6 +29,7 @@ deploy:
 install:
   - ps: Install-Module -Name Sitecore.Courier -Force
   - ps: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-  - ps: npm install "./lighthouse tools"
   - choco install sitecore-courier
   - choco install "msbuild-sonarqube-runner" -y
+  - cd "lighthouse tools"
+  - ps: npm install
