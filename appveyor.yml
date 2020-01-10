@@ -17,7 +17,7 @@ environment:
     secure: xT1FpsQcLjyehwDNkphemCQZOGIgPm8asR0BMqYtaG3+3u5FhFqFTm2QOBGaRzvY
 deploy:
   release: Sitecore.Lighthouse-v$(appveyor_build_version)
-  description: 'Solr admin in Sitecore'
+  description: 'Google Lighthouse in Sitecore'
   provider: GitHub
   auth_token:
     secure: rkLSxUbN2YMMG/r6lzLq1PN0n07dqJBtk/8ZR2c/InGy0SBOsmqGXfIQWMQOZUAs 
