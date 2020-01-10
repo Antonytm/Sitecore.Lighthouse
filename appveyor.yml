@@ -33,3 +33,4 @@ install:
   - choco install "msbuild-sonarqube-runner" -y
   - cd "lighthouse tools"
   - ps: npm install
+  - cd ..
