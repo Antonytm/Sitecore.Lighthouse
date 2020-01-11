@@ -4,6 +4,13 @@ if ($version -eq $null) {
 }
 "Package version: " + $version
 
+cd "lighthouse tools"
+npm install --save-dev
+cd node_modules
+ls
+cd ..
+cd ..
+
 Remove-Item build\package -Recurse -ErrorAction Ignore
 Remove-Item build\artifacts -Recurse -ErrorAction Ignore
 New-Item -Name build\package -ItemType directory
@@ -17,7 +24,7 @@ New-Item -Name build\package\App_Data\Lighthouse\Reports -ItemType directory
 
 Copy-Item .\src\Foundation\Lighthouse\code\bin\Foundation.Lighthouse* .\build\package\bin
 Copy-Item .\src\Foundation\Lighthouse\code\App_Config\Include\Foundation\Foundation.Lighthouse.config .\build\package\App_Config\Include\Foundation
-Copy-Item ".\lighthouse tools\*" .\build\package\App_Data\Lighthouse\Tools
+Copy-Item ".\lighthouse tools\*" .\build\package\App_Data\Lighthouse\Tools -recurse
 Copy-Item .\src\Foundation\Lighthouse\serialization\* .\build\package\Data -recurse
 
 $packageCmd = "Sitecore.Courier.Runner.exe -t build\package -o build\artifacts\sitecore.lighthouse." + $version + ".update -r"
