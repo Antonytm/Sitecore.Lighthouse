@@ -3,27 +3,26 @@ using System.Linq;
 using System.Web;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
+using File = Sitecore.Shell.Applications.ContentEditor.File;
 
 namespace Foundation.Lighthouse.Commands
 {
     public class LatestReport : Command
     {
-        private readonly Paths _paths;
+        private readonly Files _files;
         public LatestReport()
         {
-            _paths = new Paths();
+            _files = new Files();
         }
         public override void Execute(CommandContext context)
         {
             var item = context.Items[0];
-            var directory = new DirectoryInfo(_paths.GetReportsPath(item));
-            var latestFile = directory.GetFiles("*.html")
-                .OrderByDescending(f => f.LastWriteTime)
-                .FirstOrDefault();
+            var latestFile = _files.GetLatestHtmlReportFile(item);
+
             if (latestFile != null)
             {
                 //Do not disclose internal server configuration to user
-                var url = $"{HttpContext.Current.Request.Url.Scheme}://{HttpContext.Current.Request.Url.Host}/api/sitecore/lighthouse/ShowFileContent?filename={latestFile.Name}&database={item.Database}&itemId={item.ID}";
+                var url = $"{HttpContext.Current.Request.Url.Scheme}://{HttpContext.Current.Request.Url.Host}/api/sitecore/lighthouse/ShowFileContent?database={item.Database}&itemId={item.ID}";
                 SheerResponse.ShowModalDialog(new ModalDialogOptions(url) { Response = false, Width = "1000", Height = "700"});
             }
             else
