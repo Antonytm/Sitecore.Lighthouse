@@ -7,16 +7,16 @@ using Sitecore.Data.Items;
 
 namespace Foundation.Lighthouse
 {
-    public class LighthouseRunner
+    public class LighthouseRunner : ILighthouseRunner
     {
-        private readonly Paths _paths;
-        private readonly Urls _urls;
-        private SitecoreData _sitecoreData;
-        public LighthouseRunner()
+        private readonly IPaths _paths;
+        private readonly IUrls _urls;
+        private ISitecoreData _sitecoreData;
+        public LighthouseRunner(IPaths paths, IUrls urls, ISitecoreData sitecoreData)
         {
-            _paths = new Paths();
-            _urls = new Urls();
-            _sitecoreData = new SitecoreData();
+            _paths = paths;
+            _urls = urls;
+            _sitecoreData = sitecoreData;
         }
         public bool Run(Item item, OutputFormat format)
         {

@@ -7,9 +7,6 @@ namespace Foundation.Lighthouse.Commands
 {
     public class Chart : Command
     {
-        public Chart()
-        {
-        }
         public override void Execute(CommandContext context)
         {
             var item = context.Items[0];

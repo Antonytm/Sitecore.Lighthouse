@@ -7,7 +7,7 @@ using Sitecore.Web;
 
 namespace Foundation.Lighthouse
 {
-    public class Urls
+    public class Urls : IUrls
     {
         public string GetItemUrl(Item item)
         {

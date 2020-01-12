@@ -4,7 +4,7 @@ using Sitecore.Data.Items;
 
 namespace Foundation.Lighthouse
 {
-    public class Paths
+    public class Paths : IPaths
     {
         public string GetReportsPath(Item item)
         {

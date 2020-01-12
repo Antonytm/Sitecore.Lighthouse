@@ -7,10 +7,10 @@ namespace Foundation.Lighthouse.Controllers
 {
     public class LighthouseController : Controller
     {
-        private readonly Files _files;
-        public LighthouseController()
+        private readonly IFiles _files;
+        public LighthouseController(IFiles files)
         {
-            _files = new Files();
+            _files = files;
         }
         public ActionResult ShowFileContent(string filename, string itemId, string database)
         {

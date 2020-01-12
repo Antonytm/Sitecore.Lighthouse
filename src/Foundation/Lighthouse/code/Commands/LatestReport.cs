@@ -1,6 +1,4 @@
-﻿using System.IO;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
 using File = Sitecore.Shell.Applications.ContentEditor.File;
@@ -9,10 +7,10 @@ namespace Foundation.Lighthouse.Commands
 {
     public class LatestReport : Command
     {
-        private readonly Files _files;
-        public LatestReport()
+        private readonly IFiles _files;
+        public LatestReport(IFiles files)
         {
-            _files = new Files();
+            _files = files;
         }
         public override void Execute(CommandContext context)
         {

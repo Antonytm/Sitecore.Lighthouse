@@ -4,7 +4,7 @@ using Sitecore.Data.Items;
 
 namespace Foundation.Lighthouse
 {
-    public class Files
+    public class Files : IFiles
     {
         private readonly Paths _paths;
 

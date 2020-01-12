@@ -4,10 +4,10 @@ namespace Foundation.Lighthouse.Commands
 {
     public class Run : Command
     {
-        private readonly LighthouseRunner _lighthouseRunner;
-        public Run()
+        private readonly ILighthouseRunner _lighthouseRunner;
+        public Run(ILighthouseRunner lighthouseRunner)
         {
-            _lighthouseRunner = new LighthouseRunner();
+            _lighthouseRunner = lighthouseRunner;
         }
         public override void Execute(CommandContext context)
         {
