@@ -6,9 +6,6 @@ if ($version -eq $null) {
 
 cd "lighthouse tools"
 npm install --save-dev
-cd node_modules
-ls
-cd ..
 cd ..
 
 Remove-Item build\package -Recurse -ErrorAction Ignore
