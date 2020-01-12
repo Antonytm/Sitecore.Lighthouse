@@ -42,6 +42,7 @@ namespace Foundation.Lighthouse
             }
 
             startInfo.Arguments += GetOutputPath(path);
+            startInfo.Arguments += " --chrome-flags=\"--ignore-certificate-errors\"";
 
             //startInfo.Arguments += "\"";
             //startInfo.UseShellExecute = false;
