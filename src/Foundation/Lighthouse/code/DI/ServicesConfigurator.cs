@@ -1,5 +1,4 @@
-﻿using System;
-using Foundation.Lighthouse.Extensions;
+﻿using Foundation.Lighthouse.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
