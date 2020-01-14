@@ -5,7 +5,7 @@ namespace Foundation.Lighthouse
 {
     public interface IUrls
     {
-        string GetItemUrl(Item item);
+        string GetItemUrl(Item item, SiteInfo siteInfo);
         SiteInfo GetSite(Item item);
     }
 }

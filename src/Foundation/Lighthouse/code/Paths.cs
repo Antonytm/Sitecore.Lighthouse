@@ -13,12 +13,12 @@ namespace Foundation.Lighthouse
 
         public string GetReportJsonPath(Item item)
         {
-            return $"{GetReportsPath(item)}/{GetJsonFileName()}".Replace("/", "\\");
+            return $"{GetReportsPath(item)}{GetJsonFileName()}".Replace("/", "\\");
         }
 
         public string GetReportHtmlPath(Item item)
         {
-            return $"{GetReportsPath(item)}/{GetHtmlFileName()}".Replace("/", "\\");
+            return $"{GetReportsPath(item)}{GetHtmlFileName()}".Replace("/", "\\");
         }
 
         public void CreateReportDir(Item item)

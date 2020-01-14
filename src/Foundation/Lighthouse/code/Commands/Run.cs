@@ -13,8 +13,8 @@ namespace Foundation.Lighthouse.Commands
         {
             Sitecore.Diagnostics.Log.Error(context.Items[0].Paths.FullPath, this);
             Sitecore.Diagnostics.Log.Error(context.Items[0].Database.Name, this);
-            _lighthouseRunner.Run(context.Items[0], OutputFormat.Html);
-            _lighthouseRunner.Run(context.Items[0], OutputFormat.Json);
+            _lighthouseRunner.Run(context.Items[0], OutputFormat.Html, null);
+            _lighthouseRunner.Run(context.Items[0], OutputFormat.Json, null);
         }
     }
 }

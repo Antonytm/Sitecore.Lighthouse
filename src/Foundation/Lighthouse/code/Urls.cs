@@ -9,14 +9,14 @@ namespace Foundation.Lighthouse
 {
     public class Urls : IUrls
     {
-        public string GetItemUrl(Item item)
+        public string GetItemUrl(Item item, SiteInfo siteInfo)
         {
             var options = new UrlOptions()
             {
                 AlwaysIncludeServerUrl = true,
             };
 
-            var site = GetSite(item);
+            var site = siteInfo ?? GetSite(item);
             using (new SiteContextSwitcher(new SiteContext(site)))
             {
                 return LinkManager.GetItemUrl(item, options);

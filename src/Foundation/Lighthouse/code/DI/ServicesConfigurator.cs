@@ -13,6 +13,7 @@ namespace Foundation.Lighthouse.DI
             serviceCollection.AddScoped(typeof(IUrls), typeof(Urls));
             serviceCollection.AddScoped(typeof(IPaths), typeof(Paths));
             serviceCollection.AddScoped(typeof(ISitecoreData), typeof(SitecoreData));
+            serviceCollection.AddScoped(typeof(IItemsProvider), typeof(RecurseItemsProvider));
             serviceCollection.AddMvcControllersInCurrentAssembly();
         }
     }

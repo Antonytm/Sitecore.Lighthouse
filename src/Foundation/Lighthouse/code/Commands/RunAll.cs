@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Sitecore.Shell.Framework.Commands;
+using Sitecore.Web.UI.Sheer;
 
 namespace Foundation.Lighthouse.Commands
 {
@@ -12,7 +14,7 @@ namespace Foundation.Lighthouse.Commands
         }
         public override void Execute(CommandContext context)
         {
-            throw new NotImplementedException();
+            Task task = Task.Run((Action)_lighthouseRunner.RunAll);
         }
     }
 }
