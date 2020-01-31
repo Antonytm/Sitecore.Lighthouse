@@ -97,7 +97,7 @@ namespace Foundation.Lighthouse
 
         private string GetOutputPath(string path)
         {
-            return $" --output-path {path}";
+            return $" --output-path \"{path}\"";
         }
 
         private string GetOutputFormat(OutputFormat format)
