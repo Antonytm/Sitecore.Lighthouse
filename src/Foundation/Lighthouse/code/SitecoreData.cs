@@ -42,10 +42,10 @@ namespace Foundation.Lighthouse
             var newCheckpoint = new Checkpoint()
             {
                 DateTime = DateTime.Now,
-                Accessibility = data.Categories.Accessibility.Score,
-                BestPractices = data.Categories.BestPractices.Score,
-                Performance = data.Categories.Performance.Score,
-                SEO = data.Categories.Seo.Score
+                Accessibility = data.Categories.Accessibility.Score.Value,
+                BestPractices = data.Categories.BestPractices.Score.Value,
+                Performance = data.Categories.Performance.Score.Value,
+                SEO = data.Categories.Seo.Score.Value
             };
             checkpoints.Add(newCheckpoint);
             return JsonConvert.SerializeObject(checkpoints, Formatting.Indented);
