@@ -1,8 +1,8 @@
 ﻿---
-ID: "bb102c6b-c167-4453-9a76-bc44f8889424"
-Parent: "0a769db0-c598-48a7-aae7-936a92408d03"
+ID: "a5a2dc56-30ee-45a6-8e94-fe57007420c3"
+Parent: "fae139ae-f067-4cb6-a1e5-8e2dbf59ea13"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/Lighthouse/_Lighthouse
+Path: /sitecore/templates/Foundation/Lighthouse/Partial/_LighthouseSite
 DB: master
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
@@ -16,4 +16,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20191225T054628Z
+      Value: 20200206T034516Z

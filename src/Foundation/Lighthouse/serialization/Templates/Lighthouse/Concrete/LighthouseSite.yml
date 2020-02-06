@@ -1,0 +1,22 @@
+﻿---
+ID: "e0ed4f14-6c04-41f4-b09b-76d733f63d67"
+Parent: "de02d249-2ff8-4569-aca7-b7c2540f11f5"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/Lighthouse/Concrete/LighthouseSite
+DB: master
+SharedFields:
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {BB102C6B-C167-4453-9A76-BC44F8889424}
+    {A5A2DC56-30EE-45A6-8E94-FE57007420C3}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200206T043234Z

@@ -1,16 +1,16 @@
 ﻿---
-ID: "2cbb7894-d510-4ce3-a1ed-fd9dc93a76e1"
-Parent: "8cfdca64-62cd-41c0-a472-9491edb956fa"
+ID: "0723548c-2c72-4387-8d83-893230db601c"
+Parent: "ec2e3eec-7464-48c2-8c4f-831bb8489e31"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Lighthouse/_Lighthouse/Lighthouse/SEO
+Path: /sitecore/templates/Foundation/Lighthouse/Partial/_LighthouseSite/LighthouseSite/Logs
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: "Multi-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 500
+  Value: 400
 Languages:
 - Language: en
   Versions:
@@ -18,4 +18,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20191225T054928Z
+      Value: 20200206T034847Z

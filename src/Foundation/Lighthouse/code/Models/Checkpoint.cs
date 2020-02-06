@@ -9,5 +9,6 @@ namespace Foundation.Lighthouse.Model
         public double Accessibility { get; set; }
         public double BestPractices { get; set; }
         public double SEO { get; set; }
+        public string Data { get; set; }
     }
 }

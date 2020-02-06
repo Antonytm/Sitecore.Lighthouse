@@ -2,7 +2,7 @@
 ID: "3d927627-e1b5-4d61-b946-c83be74c78a3"
 Parent: "8cfdca64-62cd-41c0-a472-9491edb956fa"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Lighthouse/_Lighthouse/Lighthouse/Perfomance
+Path: /sitecore/templates/Foundation/Lighthouse/Partial/_Lighthouse/Lighthouse/Perfomance
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

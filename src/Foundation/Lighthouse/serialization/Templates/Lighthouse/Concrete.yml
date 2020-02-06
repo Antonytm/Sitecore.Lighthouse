@@ -1,0 +1,14 @@
+﻿---
+ID: "de02d249-2ff8-4569-aca7-b7c2540f11f5"
+Parent: "0a769db0-c598-48a7-aae7-936a92408d03"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Foundation/Lighthouse/Concrete
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200206T043202Z

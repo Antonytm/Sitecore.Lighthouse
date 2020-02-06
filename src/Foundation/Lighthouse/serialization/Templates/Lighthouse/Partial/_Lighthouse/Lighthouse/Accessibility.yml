@@ -1,16 +1,16 @@
 ﻿---
-ID: "2b81b040-5376-4c5c-81f2-ebb106d4bd29"
+ID: "69c93298-ab4a-4f64-99ba-c08a3397b7b5"
 Parent: "8cfdca64-62cd-41c0-a472-9491edb956fa"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Lighthouse/_Lighthouse/Lighthouse/Data
+Path: /sitecore/templates/Foundation/Lighthouse/Partial/_Lighthouse/Lighthouse/Accessibility
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Multi-Line Text"
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 300
 Languages:
 - Language: en
   Versions:

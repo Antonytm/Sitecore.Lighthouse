@@ -1,0 +1,14 @@
+﻿---
+ID: "ec2e3eec-7464-48c2-8c4f-831bb8489e31"
+Parent: "a5a2dc56-30ee-45a6-8e94-fe57007420c3"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/Lighthouse/Partial/_LighthouseSite/LighthouseSite
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200206T034847Z

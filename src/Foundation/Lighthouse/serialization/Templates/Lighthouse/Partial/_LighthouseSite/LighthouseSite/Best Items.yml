@@ -1,0 +1,21 @@
+﻿---
+ID: "65dce205-4163-4d01-b3db-2dcf5c4513bd"
+Parent: "ec2e3eec-7464-48c2-8c4f-831bb8489e31"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/Lighthouse/Partial/_LighthouseSite/LighthouseSite/Best Items
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Multi-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200206T034847Z
