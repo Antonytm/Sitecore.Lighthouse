@@ -124,6 +124,7 @@ namespace Foundation.Lighthouse
                         checkPoint.SEO /= count;
                     }
 
+                    checkPoint.DateTime = DateTime.Now;
                     var bestItems = itemsDictionary.OrderByDescending(x => x.Value).Take(10).Select(y=>y.Key);
                     var worstItems = itemsDictionary.OrderBy(x => x.Value).Take(10).Select(y => y.Key);
                     var logs = exceptions.ToString();
