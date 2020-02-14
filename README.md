@@ -29,7 +29,7 @@ Project is build following Helix principles, but you can use it in any Sitecore 
 
 After installation of Sitecore update package, you will get new ribbon in Content Editor:
 ![Sitecore Ribbon](/docs/images/ribbon.png)
-Buttons on Ribbon allows you
+Buttons on Ribbon allows you run, run for all pages and sites, view chart statistics, view latest report.
 
 ### Run Google Lighthouse report for page(item)
 ![Run](/docs/images/run.png)
@@ -58,4 +58,7 @@ You are able to see latest report by clicking Latest button.
 ![Latest report example](/docs/images/latestExample.png)
 
 If you want to find some previous report, you can find it on disc, where your Sitecore is installed in folder App_Data\Lighthouse\Reports. 
+
 ### View summarized website statistics
+Your website summary of Google Lighthouse report is saved under /sitecore/system/Modules/Lighthouse in master database. You are able to navigate to website you are interested in and see chart statistics for it, items with worst performace, items with best performance and logs. If for some page tool was not able to gather data then path for these items and reason will be present in logs.
+![Site summary](/docs/images/siteSummary.png)
