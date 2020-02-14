@@ -5,6 +5,9 @@ Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Foundation/Lighthouse/Concrete/LighthouseSite
 DB: master
 SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/lighthouse.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
@@ -12,6 +15,9 @@ SharedFields:
     {1930BBEB-7805-471A-A3BE-4858AC7CF696}
     {BB102C6B-C167-4453-9A76-BC44F8889424}
     {A5A2DC56-30EE-45A6-8E94-FE57007420C3}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{A8DF3A59-8358-4195-8F4B-AC9923718AA3}"
 Languages:
 - Language: en
   Versions:

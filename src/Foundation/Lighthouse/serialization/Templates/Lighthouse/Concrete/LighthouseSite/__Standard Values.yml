@@ -1,0 +1,22 @@
+﻿---
+ID: "a8df3a59-8358-4195-8f4b-ac9923718aa3"
+Parent: "e0ed4f14-6c04-41f4-b09b-76d733f63d67"
+Template: "e0ed4f14-6c04-41f4-b09b-76d733f63d67"
+Path: /sitecore/templates/Foundation/Lighthouse/Concrete/LighthouseSite/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/lighthouse.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200214T053303Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
