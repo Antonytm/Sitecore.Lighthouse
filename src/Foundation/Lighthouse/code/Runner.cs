@@ -83,7 +83,7 @@ namespace Foundation.Lighthouse
         {
             var siteInfoList = Sitecore.Configuration.Factory.GetSiteInfoList();
 
-            var sitesToExclude = new List<string> { "shell", "service", "login", "admin", "modules_shell", "modules_website", "scheduler", "system", "publisher", "exm" };
+            var sitesToExclude = Settings.WebsitesToIgnore;
 
             foreach (SiteInfo siteInfo in siteInfoList)
             {
