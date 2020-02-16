@@ -112,7 +112,7 @@ namespace Foundation.Lighthouse
                         }
                         catch(Exception ex)
                         {
-                            exceptions.AppendLine($"{item.Paths.FullPath}: {ex.Message}");
+                            exceptions.AppendLine($"{DateTime.Now.ToString("yyyy-MM-dd hh:mm")}:{item.Paths.FullPath}: {ex.Message}");
                         }
                     }
 

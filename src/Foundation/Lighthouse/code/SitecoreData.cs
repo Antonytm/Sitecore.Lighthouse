@@ -69,7 +69,9 @@ namespace Foundation.Lighthouse
             siteItem.Editing.BeginEdit();
             siteItem.WorstItems.RawValue = siteSummary.WorstItems;
             siteItem.BestItems.RawValue = siteSummary.BestItems;
-            siteItem.Logs.RawValue = siteSummary.Logs;
+            siteItem.Logs.RawValue = !string.IsNullOrEmpty(siteItem.Logs.RawValue) 
+                ? siteItem.Logs.RawValue + siteSummary.Logs 
+                : siteSummary.Logs;
             siteItem.Editing.EndEdit();
         }
 
