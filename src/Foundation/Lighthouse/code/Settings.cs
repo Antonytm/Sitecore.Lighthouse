@@ -36,7 +36,7 @@ namespace Foundation.Lighthouse
                 var value = Sitecore.Configuration.Settings.GetSetting("Lighthouse.Websites.To.Ignore");
                 return !string.IsNullOrEmpty(value) 
                     ? value.Split(',').Select(x => x.Trim()) 
-                    : new List<string>();
+                    : Constants.ServiceSites;
             }
         }
     }
