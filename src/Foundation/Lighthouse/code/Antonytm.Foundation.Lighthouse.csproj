@@ -229,6 +229,7 @@
     <Compile Include="Commands\Run.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\LighthouseController.cs" />
+    <Compile Include="Diagnostics\LighthouseLog.cs" />
     <Compile Include="DI\ServicesConfigurator.cs" />
     <Compile Include="Extensions\ServiceCollectionExtensions.cs" />
     <Compile Include="Files.cs" />
