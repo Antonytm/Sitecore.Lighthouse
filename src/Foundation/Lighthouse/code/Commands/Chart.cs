@@ -6,10 +6,15 @@ using Sitecore.Web.UI.Sheer;
 
 namespace Foundation.Lighthouse.Commands
 {
-    public class Chart : Command
+    public class Chart : Base
     {
         public override void Execute(CommandContext context)
         {
+            if (!Verify(context))
+            {
+                return;
+            }
+
             LighthouseLog.Debug("Open chart command was triggered");
             var item = context.Items[0];
             var lighthouseItem = new _Lighthouse(item);

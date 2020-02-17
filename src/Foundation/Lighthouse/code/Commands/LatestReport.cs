@@ -1,11 +1,10 @@
 ﻿using System.Web;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
-using File = Sitecore.Shell.Applications.ContentEditor.File;
 
 namespace Foundation.Lighthouse.Commands
 {
-    public class LatestReport : Command
+    public class LatestReport : Base
     {
         private readonly IFiles _files;
         public LatestReport(IFiles files)
@@ -14,6 +13,11 @@ namespace Foundation.Lighthouse.Commands
         }
         public override void Execute(CommandContext context)
         {
+            if (!Verify(context))
+            {
+                return;
+            }
+
             var item = context.Items[0];
             var latestFile = _files.GetLatestHtmlReportFile(item);
 

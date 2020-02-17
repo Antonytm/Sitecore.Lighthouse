@@ -223,6 +223,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Base.cs" />
     <Compile Include="Commands\Chart.cs" />
     <Compile Include="Commands\LatestReport.cs" />
     <Compile Include="Commands\RunAll.cs" />
