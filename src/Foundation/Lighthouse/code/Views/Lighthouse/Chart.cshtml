@@ -6,9 +6,9 @@
     <title></title>
 </head>
 <body>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <div id="chart_div"></div>
-    <script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="chart_div" style="height:550px;"></div>
+<script>
     google.charts.load('current', {packages: ['corechart', 'line']});
     google.charts.setOnLoadCallback(drawLineColors);
 
@@ -39,7 +39,8 @@
             vAxis: {
                 title: 'Score'
             },
-            legend: 'top'
+            legend: 'top',
+            'height':550
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
@@ -47,6 +48,6 @@
     }
 
     window.onresize = drawLineColors;
-    </script>
+</script>
 </body>
 </html>
