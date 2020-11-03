@@ -16,7 +16,7 @@ before_build:
 build:
   project: Sitecore.Lighthouse.sln
 after_build:
-  - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=%sonar_token%"
+  - SonarScanner.MSBuild.exe end /d:"sonar.login=%sonar_token%"
   - ps: .\build\build.ps1  
 environment:
   sonar_token:
