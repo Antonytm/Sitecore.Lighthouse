@@ -36,7 +36,7 @@ namespace Foundation.Lighthouse
             var startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = _paths.GetLighthouseCmdPath();
-            startInfo.Arguments += $"{_urls.GetItemUrl(item, siteInfo)}";
+            startInfo.Arguments += $"\"{_urls.GetItemUrl(item, siteInfo)}\"";
             var path = "";
             switch (format)
             {
