@@ -19,6 +19,8 @@ after_build:
   - SonarScanner.MSBuild.exe end /d:"sonar.login=%sonar_token%"
   - ps: .\build\build.ps1  
 environment:
+  matrix:
+    - JAVA_HOME: C:\Program Files\Java\jdk13
   sonar_token:
     secure: xT1FpsQcLjyehwDNkphemCQZOGIgPm8asR0BMqYtaG3+3u5FhFqFTm2QOBGaRzvY
 deploy:
