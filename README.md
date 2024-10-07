@@ -3,9 +3,15 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/jsjfx04v9u929os2?svg=true)](https://ci.appveyor.com/project/Antonytm/sitecore-Lighthouse)
 ![GitHub top language](https://img.shields.io/github/languages/top/antonytm/sitecore.lighthouse)
 
+## IMPORTANT
+
+It was tested only with Sitecore hosted on-premise. It is not recommended to install and run it on Sitecore XM Cloud.
+
 ## Abstract:
 
-Integration of Google Lighthouse with Sitecore
+Integration of Google Lighthouse with Sitecore.
+
+
 
 ## Requirements:
 Sitecore 8+
